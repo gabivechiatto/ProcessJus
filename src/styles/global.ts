@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   --gree: #78B440;
   --blue: #388CC9;
   --yellow: #FFCC03;
+  --orange: #E74C3C;
 }
 
 html {
@@ -22,6 +23,12 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+body, input, textarea, select, button {
+ font-family: 'Roboto', Arial, sans-serif; 
+ font-weight: 400;
+ font-size: 16px;
 }
 `;
 
