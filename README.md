@@ -47,13 +47,16 @@ Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.co
 $ git clone https://github.com/gabivechiatto/teste_jusbrasil_front
 
 # Entre na pasta
-$ cd na pasta raíz
+$ cd teste_jusbrasil_front
 
 # Instale as dependências
 $ yarn
 
-# Para iniciar o projeto
+# Para iniciar rodar projeto local
 $ yarn dev
+
+# Para rodar os testes e2e
+$ npx cypress open
 ```
 
 &#xa0;
