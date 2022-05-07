@@ -14,6 +14,7 @@ export const HeaderContent = styled.header`
   padding: 0.5rem;
 
   @media only screen and (max-width: 36em) {
+    width: 100vw;
     height: 8rem;    
     flex-wrap: wrap;    
   }

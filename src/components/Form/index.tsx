@@ -1,5 +1,9 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useEffect, useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { ToastError, ToastNotFound } from '../Toast';
+import { ProcessData } from '../ProcessData';
+
+import { api } from '../../services/api';
 
 import 'react-toastify/dist/ReactToastify.min.css';
 
@@ -17,17 +21,59 @@ import {
 type InputData = {
   process: string
 }
+type IFormProps = {
+  numero: string
+  numero_alternativo: string
+  foro: string
+  comarca_cnj: string
+  uf: string
+  vara: string
+  area: string
+  assunto: string
+  natureza: string
+  alteradoEm: string
+  distribuicaoData: string
+  partes: Array<{}>
+  tribunal: string
+  classeNatureza: string
+  comarca: string
+  valor: number
+  movs: Array<{}>
+  instancia: number
+}
 
 export default function Form() {
   const {
-    register, formState,
+    register, handleSubmit, formState, reset,
   } = useForm<InputData>();
+  const [response, setResponse] = useState<Array<IFormProps>>([]);
+  const [status, setStatus] = useState(0);
   const { errors } = formState;
+
+  async function getInfo(process: string): Promise<IFormProps> {
+    const { data, status } = await api.get(`tribproc/${process}`, {
+      params: {
+        tipo_numero: '8',
+      },
+    });
+    setResponse(data);
+    setStatus(status);
+    return data;
+  }
+  const onSubmit: SubmitHandler<InputData> = async (data) => {
+    getInfo(data.process);
+    reset();
+  };
+
+  useEffect(() => {
+    status !== 200 ? ToastError() : null;
+    Object.keys(response).length === 1 ? ToastNotFound() : null;
+  }, [response]);
 
   return (
     <Container>
       <Description>Acompanhe aqui o seu processo jurídico com mais facilidade</Description>
-      <FormContent method="POST">
+      <FormContent method="POST" onSubmit={handleSubmit(onSubmit)}>
         <Box>
           <Label id="process">Processo:</Label>
           <Input
@@ -51,6 +97,7 @@ export default function Form() {
           </FormButton>
         )}
       </FormContent>
+      {Object.keys(response).length > 1 && <ProcessData data={response} />}
     </Container>
   );
 }
