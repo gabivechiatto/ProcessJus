@@ -1,12 +1,12 @@
-# Digesto | Consulta Processos #️
+# Digesto | Consulta Processos
 
 ## Como usar? ##
  
  <div align="center">
-  <img src="desktop.png" alt="desktop"/> 
+  <img src="src/assets/desktop.png" alt="desktop"/> 
  </div>
  <div align="center">
-  <img src="mobile.png" alt="mobile"/> 
+  <img src="src/assets/mobile.png" alt="mobile"/> 
  </div>
 
   &#xa0;
@@ -34,7 +34,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [React](https://pt-br.reactjs.org/)
 - [Yarn](https://yarnpkg.com/)
 - [Vite](https://vitejs.dev/)
-
+- [Cypress](https://www.cypress.io/)
 
 ## :white_check_mark: Pré-requisitos ##
 
@@ -47,13 +47,16 @@ Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.co
 $ git clone https://github.com/gabivechiatto/teste_jusbrasil_front
 
 # Entre na pasta
-$ cd na pasta raíz
+$ cd teste_jusbrasil_front
 
 # Instale as dependências
 $ yarn
 
-# Para iniciar o projeto
+# Para iniciar rodar projeto local
 $ yarn dev
+
+# Para rodar os testes e2e
+$ npx cypress open
 ```
 
 &#xa0;
