@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 
 export function ToastNotFound() {
-  return toast.error('Processo não localizado.', {
+  return toast.error('Processo não encontrado.', {
     position: 'top-right',
     autoClose: 5000,
     hideProgressBar: false,

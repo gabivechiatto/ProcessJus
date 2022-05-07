@@ -1,4 +1,5 @@
 import React from 'react';
+import { IDataProps } from '../../models/IDataProps';
 import {
   Subtitle,
   TitleProcess,
@@ -14,28 +15,6 @@ import {
   Details,
 } from './styles';
 
-interface IDataProps {
-  data: {
-    numero: string
-    numero_alternativo: string
-    foro: string
-    comarca_cnj: string
-    uf: string
-    vara: string
-    area: string
-    assunto: string
-    natureza: string
-    alteradoEm: string
-    distribuicaoData: string
-    partes: Array<{}>
-    tribunal: string
-    classeNatureza: string
-    comarca: string
-    valor: number
-    movs: Array<{}>
-    instancia: number
-  }
-}
 export function ProcessData({ data }: IDataProps): JSX.Element {
   const dataAtualizacao = new Date(data.alteradoEm).toLocaleDateString(
     'pt-BR',

@@ -17,37 +17,15 @@ import {
   Label,
   FormButton,
 } from './styles';
-
-type InputData = {
-  process: string
-}
-type IFormProps = {
-  numero: string
-  numero_alternativo: string
-  foro: string
-  comarca_cnj: string
-  uf: string
-  vara: string
-  area: string
-  assunto: string
-  natureza: string
-  alteradoEm: string
-  distribuicaoData: string
-  partes: Array<{}>
-  tribunal: string
-  classeNatureza: string
-  comarca: string
-  valor: number
-  movs: Array<{}>
-  instancia: number
-}
+import { InputData } from '../../models/InputData';
+import { IFormProps } from '../../models/IFormProps';
 
 export default function Form() {
   const {
     register, handleSubmit, formState, reset,
   } = useForm<InputData>();
   const [response, setResponse] = useState<Array<IFormProps>>([]);
-  const [status, setStatus] = useState(0);
+  const [status, setStatus] = useState(200);
   const { errors } = formState;
 
   async function getInfo(process: string): Promise<IFormProps> {
