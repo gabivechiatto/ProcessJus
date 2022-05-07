@@ -58,6 +58,7 @@ export default function Form() {
             type="text"
             id="process"
             placeholder="Digite o número do processo"
+            data-test-cy="input-process"
             {...register('process', {
               required: 'Por favor, informe o número do processo',
               minLength: 20,
