@@ -1,12 +1,12 @@
-# Digesto | Consulta Processos #️
+# Digesto | Consulta Processos
 
 ## Como usar? ##
  
  <div align="center">
-  <img src="desktop.png" alt="desktop"/> 
+  <img src="assets/desktop.png" alt="desktop"/> 
  </div>
  <div align="center">
-  <img src="mobile.png" alt="mobile"/> 
+  <img src="seets/mobile.png" alt="mobile"/> 
  </div>
 
   &#xa0;
@@ -34,7 +34,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [React](https://pt-br.reactjs.org/)
 - [Yarn](https://yarnpkg.com/)
 - [Vite](https://vitejs.dev/)
-
+- [Cypress](https://www.cypress.io/)
 
 ## :white_check_mark: Pré-requisitos ##
 
