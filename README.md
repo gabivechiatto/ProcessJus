@@ -3,10 +3,10 @@
 ## Como usar? ##
  
  <div align="center">
-  <img src="assets/desktop.png" alt="desktop"/> 
+  <img src="src/assets/desktop.png" alt="desktop"/> 
  </div>
  <div align="center">
-  <img src="seets/mobile.png" alt="mobile"/> 
+  <img src="src/assets/mobile.png" alt="mobile"/> 
  </div>
 
   &#xa0;
