@@ -7,7 +7,7 @@ export const HeaderContent = styled.header`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: var(--dark-red);
+  background: var(--dark-blue);
   color: var(--white);
   font-size: 1.75rem;
   font-weight: 500;

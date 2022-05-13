@@ -5,12 +5,11 @@ const GlobalStyle = createGlobalStyle`
   --black: #000000;
   --white: #ffffff;
   --light-gray: #f0f0f0;
-  --dark-gray: #BCBDBE;
-  --dark-gray-font: #616161;
-  --dark-red: #6C0A11;
+  --dark-gray: #E9E9E9;
+  --dark-gray-font: #616161;  
+  --dark-blue: #223656;
   --green: #78B440;
-  --blue: #388CC9;
-  --yellow: #FFCC03;
+  --blue: #388CC9;  
   --orange: #E74C3C;
 }
 
@@ -24,6 +23,10 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+body {
+  background: var(--dark-gray);
 }
 
 body, input, textarea, select, button {

@@ -6,7 +6,7 @@ export const Container = styled.main`
   padding: 2rem 1rem;
   display: flex;
   align-items: center;  
-  flex-direction: column;
+  flex-direction: column;  
 
   @media print and screen and (max-width: 30em) {
     width: 100%;
@@ -50,7 +50,8 @@ export const Input = styled.input`
   width: 300px;
   padding: 0.8rem;
   border-radius: 3px;
-  border: 1px solid var(--dark-red); 
+  background: var(--white);
+  border: 1px solid var(--dark-blue); 
   outline: 0;
 `;
 
@@ -61,8 +62,9 @@ export const Label = styled.label`
 
 export const FormButton = styled.button`
   width: 130px;
-  border: 1px solid var(--dark-red); 
-  background: none; 
+  border: 1px solid var(--dark-blue); 
+  background: var(--dark-blue);
+  color: var(--white);
   padding: 0.5rem 1rem;
   margin-left: 15px;
   border-radius: 3px;
@@ -71,7 +73,7 @@ export const FormButton = styled.button`
   align-self: center;
 
   &:disabled {
-    background: var(--dark-red);
+    background: var(--dark-blue);
     opacity: 0.15;
     cursor: not-allowed;
 
@@ -82,8 +84,8 @@ export const FormButton = styled.button`
   }
   
   &:hover {
-    background: var(--dark-red);
-    color: var(--white);
+    background: var(--dark-blue);
+    opacity: 0.9;    
   }
 `;
 

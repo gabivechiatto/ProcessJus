@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import AxiosMock from 'axios-mock-adapter';
 import Form from '.';
 import { api } from '../../services/api';
@@ -13,6 +14,6 @@ describe('Form Component', () => {
 
     apiMock.onGet(`tribproc/${processNumber}`).reply(200);
 
-    expect(await screen.getByRole('')).toBeInDocument();
+    await expect(screen.getByRole('')).toBeInDocument();
   });
 });

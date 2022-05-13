@@ -4,9 +4,10 @@ export const Container = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;  
-  flex-wrap: wrap;  
+  flex-wrap: wrap;    
   height: 100%;
-  border: 1px solid black;
+  background: var(--white);
+  border: 1px solid var(--dark-blue);
   border-radius: 3px;
   padding: 1.2rem;
 
@@ -27,13 +28,13 @@ export const HeaderContent = styled.div`
 
 export const TitleProcess = styled.h3`
   font-size: 1.8rem;  
-  color: var(--blue);
+  color: var(--dark-blue);
   font-weight: 500;
 `;
 
 export const TitleCourt = styled.h3`
   font-size: 1.8rem;  
-  color: var(--blue);
+  color: var(--dark-blue);
   font-weight: 500;
 `;
 
