@@ -25,7 +25,7 @@
 
 ## :dart: Sobre ##
 
-<p> A aplicação consistem em um site de busca e informações do andamento de processos jurídicos, disponíveis na API da Digesto (https://www.digesto.com.br/), que é uma empresa da Jusbrasil (https://www.jusbrasil.com.br/home).</p>
+<p> A aplicação consistem em um site de busca e informações do andamento de processos jurídicos, disponíveis na API da empresa jurídica Digesto (https://www.digesto.com.br/).</p>
 
 ## :rocket: Tecnologias ##
 
