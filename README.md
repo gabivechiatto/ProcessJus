@@ -1,6 +1,4 @@
 # ProcessJus
-
-## Como usar? ##
  
  <div align="center">
   <img src="src/assets/desktop.png" alt="desktop"/> 
